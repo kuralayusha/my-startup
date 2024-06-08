@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Supporters from "./pages/Supporters";
+import SupportButton from "./components/SupportButton";
 
-function App() {
+const App = () => {
+  const { t } = useTranslation();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+      document.body.classList.toggle("dark-mode", savedTheme === "dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode ? "dark" : "light";
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("dark-mode", !isDarkMode);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+        <SupportButton />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/supporters" element={<Supporters />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
