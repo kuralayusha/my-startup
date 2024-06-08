@@ -1,0 +1,69 @@
+.json-beautifier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.json-beautifier h1 {
+  margin-bottom: 1rem;
+}
+
+.json-beautifier .input {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.json-beautifier button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: var(--dark-green);
+  border: none;
+  color: var(--cream);
+  border-radius: 4px;
+}
+
+.dark-mode .json-beautifier button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: var(--cream);
+  border: none;
+  color: var(--dark-green);
+  border-radius: 4px;
+}
+
+/* .json-beautifier button:hover {
+  background-color: var(--cream);
+  border: 1px solid var(--dark-green);
+  color: var(--dark-green);
+} */
+
+/* .dark-mode .json-beautifier button {
+  background-color: var(--cream);
+  border: 1px solid var(--cream);
+  color: var(--dark-green);
+} */
+
+.json-beautifier .output {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: monospace;
+  background-color: var(--light-mode-bg);
+  color: var(--light-mode-text);
+  white-space: pre-wrap;
+  overflow: auto;
+  border: 1px solid var(--dark-green);
+  text-align: left;
+}

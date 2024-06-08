@@ -1,14 +1,21 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import JSONBeautifier from "../projects/json-beautifier/JSONBeautifier";
 import "./Projects.css";
 
 const Projects = () => {
-  const { t } = useTranslation();
-
   return (
     <div className="projects">
-      <h1>{t("ourProjects")}</h1>
-      {/* Project cards will be added here */}
+      <h1>Our Projects</h1>
+      <div className="project-list">
+        <Link to="/projects/json-beautifier">
+          <div className="project-card">
+            <h2>JSON Beautifier</h2>
+            <p>Format and beautify your JSON data.</p>
+          </div>
+        </Link>
+        {/* Diğer projeler burada listelenecek */}
+      </div>
     </div>
   );
 };

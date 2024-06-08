@@ -8,6 +8,9 @@ import Projects from "./pages/Projects";
 import Supporters from "./pages/Supporters";
 import SupportButton from "./components/SupportButton";
 
+// Projects
+import JSONBeautifier from "./projects/json-beautifier/JSONBeautifier";
+
 const App = () => {
   const { t } = useTranslation();
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -36,6 +39,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/supporters" element={<Supporters />} />
+          {/* Projects */}
+          <Route
+            path="/projects/json-beautifier"
+            element={<JSONBeautifier />}
+          />
         </Routes>
       </div>
     </Router>
