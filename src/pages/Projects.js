@@ -1,37 +1,36 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
+import projectsData from "../data/projects.json"; // Dosya yolunu güncelledik
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("/data/projects.json")
-      .then((response) => response.json())
-      .then((data) => setProjects(data));
+    setProjects(projectsData);
   }, []);
 
   return (
     <div className="projects">
-      <h1>Our Projects</h1>
-      <div className="project-list">
+      <h1 className="projects__title">{t("ourProjects")}</h1>
+      <div className="projects__list">
         {projects.map((project) => (
-          <Link key={project.id} to={project.link}>
-            <div className="project-card">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="project-image"
-              />
-              <h2>{project.name}</h2>
-              <p>{project.description}</p>
-              <div className="filters">
-                {project.filters.map((filter) => (
-                  <span key={filter} className="filter-tag">
-                    {filter}
-                  </span>
-                ))}
-              </div>
+          <Link to={project.link} key={project.id} className="project-card">
+            {/* <img
+              src={project.image}
+              alt={project.name}
+              className="project-card__image"
+            /> */}
+            <h2 className="project-card__name">{project.name}</h2>
+            <p className="project-card__description">{project.description}</p>
+            <div className="project-card__tags">
+              {project.filters.map((filter, index) => (
+                <span key={index} className="project-card__tag">
+                  {filter}
+                </span>
+              ))}
             </div>
           </Link>
         ))}

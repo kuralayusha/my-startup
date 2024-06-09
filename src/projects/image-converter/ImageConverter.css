@@ -1,0 +1,85 @@
+.image-converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.image-converter h1 {
+  margin-bottom: 1rem;
+}
+
+.image-converter__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.image-converter__controls input[type="file"],
+.image-converter__controls select {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  background-color: var(--light-mode-bg);
+  color: var(--dark-green);
+}
+
+body.dark-mode .image-converter__controls input[type="file"],
+body.dark-mode .image-converter__controls select {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.image-converter__controls button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--dark-green);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.dark-mode .image-converter__controls button {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.image-converter__warning {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.image-converter__output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.image-converter__output img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.image-converter__output button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--dark-green);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.dark-mode .image-converter__output button {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}

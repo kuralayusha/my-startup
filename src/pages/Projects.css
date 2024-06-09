@@ -1,52 +1,90 @@
 .projects {
   padding: 2rem;
+  background-color: var(--light-mode-bg);
+  color: var(--dark-green);
 }
 
-.projects h1 {
-  margin-bottom: 2rem;
+.projects__list h2,
+.projects__list p {
+  color: var(--dark-green);
+}
+
+body.dark-mode .projects__list h2,
+body.dark-mode .projects__list p {
+  color: var(--cream);
+}
+
+body.dark-mode .projects {
+  background-color: var(--dark-mode-bg);
+  color: var(--cream);
+}
+
+.projects__title {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.project-list {
+.projects__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 2rem;
 }
 
 .project-card {
-  background-color: var(--light-mode-bg);
-  color: var(--light-mode-text);
+  background-color: var(--cream);
   border: 1px solid var(--dark-green);
   border-radius: 8px;
   padding: 1rem;
-  width: 200px;
-  text-align: center;
-  transition: transform 0.3s;
+  width: 280px;
+  max-width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.project-card:hover {
-  transform: scale(1.05);
+body.dark-mode .project-card {
+  background-color: var(--dark-mode-bg);
+  border: 1px solid var(--cream);
 }
 
-.project-card h2 {
-  margin-bottom: 0.5rem;
-}
-
-.project-card p {
+.project-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
   margin-bottom: 1rem;
 }
 
-.filters {
+.project-card__name {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.project-card__description {
+  flex-grow: 1;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center;
 }
 
-.filter-tag {
+.project-card__tag {
   background-color: var(--dark-green);
   color: var(--cream);
+  padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
+}
+
+body.dark-mode .project-card__tag {
+  background-color: var(--cream);
+  color: var(--dark-green);
 }

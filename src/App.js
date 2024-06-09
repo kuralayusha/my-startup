@@ -16,8 +16,8 @@ import Base64EncoderDecoder from "./projects/base64-encoder-decoder/Base64Encode
 import CSSEditor from "./projects/css-editor/CSSEditor";
 import RegexTester from "./projects/regex-tester/RegexTester";
 import URLDecoderEncoder from "./projects/url-encoder-decoder/URLDecoderEncoder";
-import PasswordGenerator from './projects/password-generator/PasswordGenerator';
-
+import PasswordGenerator from "./projects/password-generator/PasswordGenerator";
+import ImageConverter from "./projects/image-converter/ImageConverter";
 
 const App = () => {
   const { t } = useTranslation();
@@ -42,35 +42,33 @@ const App = () => {
     <Router>
       <div className="App">
         <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-        <SupportButton />
+        {/* <SupportButton /> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/tools" element={<Projects />} />
           <Route path="/supporters" element={<Supporters />} />
           {/* Projects */}
+          <Route path="/tools/json-beautifier" element={<JSONBeautifier />} />
+          <Route path="/tools/frontend-playground" element={<HTMLViewer />} />
+          <Route path="/tools/js-obfuscator" element={<JSObfuscator />} />
           <Route
-            path="/projects/json-beautifier"
-            element={<JSONBeautifier />}
-          />
-          <Route
-            path="/projects/frontend-playground"
-            element={<HTMLViewer />}
-          />
-          <Route path="/projects/js-obfuscator" element={<JSObfuscator />} />
-          <Route
-            path="/projects/base64-encoder-decoder"
+            path="/tools/base64-encoder-decoder"
             element={<Base64EncoderDecoder />}
           />
-          <Route path="/projects/css-editor" element={<CSSEditor />} />
-          <Route path="/projects/regex-tester" element={<RegexTester />} />
+          <Route path="/tools/css-editor" element={<CSSEditor />} />
+          <Route path="/tools/regex-tester" element={<RegexTester />} />
           <Route
-            path="/projects/url-encoder-decoder"
+            path="/tools/url-encoder-decoder"
             element={<URLDecoderEncoder />}
           />
           <Route
-            path="/projects/password-generator"
+            path="/tools/password-generator"
             element={<PasswordGenerator />}
           />
+          <Route path="/tools/image-converter" element={<ImageConverter />} />
+
+          {/* write a code that if there is not a route then send them to home page */}
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
     </Router>
