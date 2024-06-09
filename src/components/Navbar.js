@@ -22,7 +22,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       </button>
       <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
         <a href="/">{t("home")}</a>
-        <a href="/projects">{t("tools")}</a>
+        <a href="/projects">{t("projects")}</a>
         <a href="/supporters">{t("supporters")}</a>
         <div className="dropdown">
           <span>{i18n.language === "en" ? "English" : "Türkçe"}</span>
