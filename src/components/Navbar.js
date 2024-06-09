@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ toggleTheme, isDarkMode }) => {
   const { t, i18n } = useTranslation();
@@ -21,9 +22,9 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         ☰
       </button>
       <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
-        <a href="/">{t("home")}</a>
-        <a href="/projects">{t("projects")}</a>
-        <a href="/supporters">{t("supporters")}</a>
+        <Link to="/">{t("home")}</Link>
+        <Link to="/tools">{t("projects")}</Link>
+        <Link to="/supporters">{t("supporters")}</Link>
         <div className="dropdown">
           <span>{i18n.language === "en" ? "English" : "Türkçe"}</span>
           <div className="dropdown-content">

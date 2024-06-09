@@ -65,6 +65,10 @@ body.dark-mode .navbar-menu .dropdown-content {
   background-color: var(--cream);
   color: var(--dark-green);
 }
+body.dark-mode .navbar-menu .dropdown-content a:hover {
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
 
 body.dark-mode .navbar-menu .dropdown-content a {
 }
