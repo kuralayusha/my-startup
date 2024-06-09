@@ -1,4 +1,6 @@
 {
+  "lightMode": "Light Mode",
+  "darkMode": "Dark Mode",
   "home": "Home",
   "projects": "Tools",
   "supporters": "Supporters",

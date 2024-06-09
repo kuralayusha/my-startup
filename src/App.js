@@ -33,7 +33,7 @@ const App = () => {
 
   const toggleTheme = () => {
     const newTheme = !isDarkMode ? "dark" : "light";
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prevMode) => !prevMode);
     document.body.classList.toggle("dark-mode", !isDarkMode);
     localStorage.setItem("theme", newTheme);
   };

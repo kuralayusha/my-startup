@@ -2,58 +2,117 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--navbar-light-bg);
-  color: var(--navbar-light-text);
+  background-color: var(--dark-green);
+  color: var(--cream);
+  padding: 1rem;
 }
 
 body.dark-mode .navbar {
-  background-color: var(--navbar-dark-bg);
-  color: var(--navbar-dark-text);
+  background-color: var(--cream);
+  color: var(--dark-green);
 }
 
-.navbar-brand {
+.navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: inherit; /* Bu renk dark mode'a uygun olacak şekilde değiştirilecek */
 }
 
 .navbar-menu {
   display: flex;
-  align-items: center;
+  gap: 1rem;
 }
 
 .navbar-menu a {
-  margin-right: 1rem;
-  color: inherit;
+  color: inherit; /* Bu renk dark mode'a uygun olacak şekilde değiştirilecek */
   text-decoration: none;
 }
 
-.navbar-menu select {
-  margin-right: 1rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: var(--navbar-light-text);
-  color: var(--navbar-light-bg);
+body.dark-mode .navbar-menu a {
+  color: var(--dark-green);
 }
 
-body.dark-mode .navbar-menu select {
-  background-color: var(--navbar-dark-text);
-  color: var(--navbar-dark-bg);
+.navbar-menu .dropdown {
+  position: relative;
 }
 
-.navbar-menu button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+.navbar-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dark-green);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+body.dark-mode .navbar-menu .dropdown-content {
+  background-color: var(--cream);
+  color: var(--dark-green) !important;
+}
+
+.navbar-menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-menu .dropdown-content a {
+  color: inherit; /* Bu renk dark mode'a uygun olacak şekilde değiştirilecek */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-menu .dropdown-content a:hover {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+body.dark-mode .navbar-menu .dropdown-content a {
+}
+
+.navbar-toggle {
+  display: none;
+  color: inherit; /* Bu renk dark mode'a uygun olacak şekilde değiştirilecek */
+}
+
+body.dark-mode .navbar-toggle {
+  color: var(--dark-green);
+}
+
+.theme-toggle {
+  background: none;
   border: none;
-  border-radius: 4px;
+  color: inherit; /* Bu renk dark mode'a uygun olacak şekilde değiştirilecek */
   cursor: pointer;
-  background-color: var(--navbar-light-text);
-  color: var(--navbar-light-bg);
+  font-size: 1rem;
 }
 
-body.dark-mode .navbar-menu button {
-  background-color: var(--navbar-dark-text);
-  color: var(--navbar-dark-bg);
+body.dark-mode .theme-toggle {
+  color: var(--dark-green);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit; /* Bu renk dark mode'a uygun olacak şekilde değiştirilecek */
+    font-size: 1.5rem;
+  }
 }
