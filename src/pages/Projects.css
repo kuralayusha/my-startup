@@ -1,0 +1,52 @@
+.projects {
+  padding: 2rem;
+}
+
+.projects h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: var(--light-mode-bg);
+  color: var(--light-mode-text);
+  border: 1px solid var(--dark-green);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-tag {
+  background-color: var(--dark-green);
+  color: var(--cream);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,35 @@
+.supporters {
+  padding: 2rem;
+  text-align: center;
+}
+
+.supporters h1 {
+  margin-bottom: 1rem;
+}
+
+.supporters p {
+  margin-bottom: 2rem;
+}
+
+.supporter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.supporter-item {
+  margin-bottom: 0.5rem;
+}
+
+.supporter-item a {
+  text-decoration: none;
+  color: var(--dark-green);
+  font-weight: bold;
+}
+
+.dark-mode .supporter-item a {
+  color: var(--light-green);
+}
+
+.supporter-item a:hover {
+  text-decoration: underline;
+}

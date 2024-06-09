@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "JSON Beautifier",
+    "description": "Format and beautify your JSON data.",
+    "link": "/projects/json-beautifier",
+    "filters": ["#json", "#formatter", "#tool"],
+    "image": "/images/json-beautifier.png"
+  },
+  {
+    "id": 2,
+    "name": "Frontend Playground",
+    "description": "View and format HTML, CSS, and JavaScript content with live preview.",
+    "link": "/projects/frontend-playground",
+    "filters": ["#html", "#css", "#javascript", "#viewer", "#tool"],
+    "image": "/images/html-viewer.png"
+  },
+  {
+    "id": 3,
+    "name": "JavaScript Obfuscator",
+    "description": "Obfuscate your JavaScript code to make it unreadable.",
+    "link": "/projects/js-obfuscator",
+    "filters": ["#javascript", "#obfuscator", "#security", "#tool"],
+    "image": "/images/js-obfuscator.png"
+  },
+  {
+    "id": 4,
+    "name": "Base64 Encoder/Decoder",
+    "description": "Encode and decode text to and from Base64 format.",
+    "link": "/projects/base64-encoder-decoder",
+    "filters": ["#base64", "#encoder", "#decoder", "#tool"],
+    "image": "/images/base64-encoder-decoder.png"
+  },
+  {
+    "id": 5,
+    "name": "CSS Editor",
+    "description": "Edit and preview basic CSS properties dynamically.",
+    "link": "/projects/css-editor",
+    "filters": ["#css", "#editor", "#tool"],
+    "image": "/images/css-editor.png"
+  },
+  {
+    "id": 6,
+    "name": "Regex Tester",
+    "description": "Test and validate your regular expressions.",
+    "link": "/projects/regex-tester",
+    "filters": ["#regex", "#tester", "#tool"],
+    "image": "/images/regex-tester.png"
+  },
+  {
+    "id": 7,
+    "name": "URL Encoder/Decoder",
+    "description": "Encode and decode URLs.",
+    "link": "/projects/url-encoder-decoder",
+    "filters": ["#url", "#encoder", "#decoder", "#tool"],
+    "image": "/images/url-encoder-decoder.png"
+  },
+  {
+    "id": 8,
+    "name": "Password Generator",
+    "description": "Generate strong and secure passwords.",
+    "link": "/projects/password-generator",
+    "filters": ["#password", "#generator", "#tool"],
+    "image": "/images/password-generator.png"
+  }
+  
+]

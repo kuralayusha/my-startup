@@ -1,0 +1,100 @@
+.regex-tester {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.regex-tester__heading {
+  margin-bottom: 1rem;
+}
+
+.regex-tester__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.regex-tester__label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.regex-tester__textarea,
+.regex-tester__input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  background-color: var(--light-mode-bg);
+  color: var(--dark-green);
+  width: 100%;
+}
+
+body.dark-mode .regex-tester__textarea,
+body.dark-mode .regex-tester__input {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.regex-tester__button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--dark-green);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+body.dark-mode .regex-tester__button {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.regex-tester__results {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+}
+
+.regex-tester__subheading {
+  margin-bottom: 1rem;
+}
+
+.regex-tester__match {
+  padding: 0.5rem;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  background-color: var(--light-mode-bg);
+  color: var(--dark-green);
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+body.dark-mode .regex-tester__match {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.regex-tester__no-match {
+  padding: 0.5rem;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  background-color: var(--light-mode-bg);
+  color: var(--dark-green);
+  width: 100%;
+}
+
+body.dark-mode .regex-tester__no-match {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}

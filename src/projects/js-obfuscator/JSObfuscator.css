@@ -1,0 +1,93 @@
+.js-obfuscator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.js-obfuscator h1 {
+  margin-bottom: 1rem;
+}
+
+.js-obfuscator .input,
+.js-obfuscator .output {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: monospace;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  resize: none;
+  overflow-y: auto;
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
+
+body.dark-mode .js-obfuscator .input,
+body.dark-mode .js-obfuscator .output {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.js-obfuscator button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: var(--dark-green);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+}
+
+.dark-mode .js-obfuscator button {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.js-obfuscator button:hover {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+/* Custom scrollbar styles */
+.js-obfuscator .input::-webkit-scrollbar,
+.js-obfuscator .output::-webkit-scrollbar {
+  width: 5px;
+}
+
+.js-obfuscator .input::-webkit-scrollbar-thumb,
+.js-obfuscator .output::-webkit-scrollbar-thumb {
+  background-color: var(--cream);
+  border-radius: 10px;
+}
+
+body.dark-mode .js-obfuscator .input::-webkit-scrollbar-thumb,
+body.dark-mode .js-obfuscator .output::-webkit-scrollbar-thumb {
+  background-color: var(--dark-green);
+}
+
+.js-obfuscator .input::-webkit-scrollbar-track,
+.js-obfuscator .output::-webkit-scrollbar-track {
+  background: var(--dark-green);
+}
+
+body.dark-mode .js-obfuscator .input::-webkit-scrollbar-track,
+body.dark-mode .js-obfuscator .output::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+/* For Firefox */
+.js-obfuscator .input,
+.js-obfuscator .output {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cream) var(--dark-green);
+}
+
+body.dark-mode .js-obfuscator .input,
+body.dark-mode .js-obfuscator .output {
+  scrollbar-color: var(--dark-green) var(--cream);
+}

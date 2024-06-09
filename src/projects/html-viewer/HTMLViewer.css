@@ -1,0 +1,110 @@
+.html-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.editor textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: monospace;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  resize: vertical;
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
+
+.dark-mode .editor textarea {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+.preview {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  background-color: var(--light-mode-bg);
+  color: var(--dark-green);
+}
+
+.preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Min height for textareas on larger screens */
+@media (min-width: 768px) {
+  .editor {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .editor textarea {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 0;
+    height: 500px;
+  }
+}
+
+/* Reset height for textareas on smaller screens */
+@media (max-width: 767px) {
+  .editor textarea {
+    height: 150px;
+  }
+}
+
+/* Custom scrollbar styles */
+.editor textarea::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+.editor textarea::-webkit-scrollbar-thumb {
+  background-color: var(--dark-green); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Roundness of the scrollbar thumb */
+}
+
+.editor textarea::-webkit-scrollbar-track {
+  background: var(--light-mode-bg); /* Background of the scrollbar track */
+}
+
+/* For Firefox */
+.editor textarea {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: var(--dark-green) var(--light-mode-bg); /* thumb and track color */
+}
+
+/* Popup styling */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dark-green);
+  color: var(--cream);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  z-index: 1000;
+}
+
+.dark-mode .popup {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}

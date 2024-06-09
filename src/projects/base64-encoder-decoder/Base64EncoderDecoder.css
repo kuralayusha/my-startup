@@ -1,0 +1,104 @@
+.base64-encoder-decoder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.base64-encoder-decoder h1 {
+  margin-bottom: 1rem;
+}
+
+.base64-encoder-decoder .input,
+.base64-encoder-decoder .output {
+  width: 100%;
+  max-width: 600px;
+  height: 200px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: monospace;
+  border: 1px solid var(--dark-green);
+  border-radius: 4px;
+  resize: none;
+  overflow-y: auto;
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
+
+body.dark-mode .base64-encoder-decoder .input,
+body.dark-mode .base64-encoder-decoder .output {
+  background-color: var(--cream);
+  color: var(--dark-green);
+  border-color: var(--cream);
+}
+
+.base64-encoder-decoder .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.base64-encoder-decoder button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--dark-green);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+}
+
+.base64-encoder-decoder button:hover {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+body.dark-mode .base64-encoder-decoder button {
+  background-color: var(--cream);
+  color: var(--dark-green);
+}
+
+body.dark-mode .base64-encoder-decoder button:hover {
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
+
+/* Custom scrollbar styles */
+.base64-encoder-decoder .input::-webkit-scrollbar,
+.base64-encoder-decoder .output::-webkit-scrollbar {
+  width: 5px;
+}
+
+.base64-encoder-decoder .input::-webkit-scrollbar-thumb,
+.base64-encoder-decoder .output::-webkit-scrollbar-thumb {
+  background-color: var(--cream);
+  border-radius: 10px;
+}
+
+body.dark-mode .base64-encoder-decoder .input::-webkit-scrollbar-thumb,
+body.dark-mode .base64-encoder-decoder .output::-webkit-scrollbar-thumb {
+  background-color: var(--dark-green);
+}
+
+.base64-encoder-decoder .input::-webkit-scrollbar-track,
+.base64-encoder-decoder .output::-webkit-scrollbar-track {
+  background: var(--dark-green);
+}
+
+body.dark-mode .base64-encoder-decoder .input::-webkit-scrollbar-track,
+body.dark-mode .base64-encoder-decoder .output::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+/* For Firefox */
+.base64-encoder-decoder .input,
+.base64-encoder-decoder .output {
+  scrollbar-width: thin;
+  scrollbar-color: var(--cream) var(--dark-green);
+}
+
+body.dark-mode .base64-encoder-decoder .input,
+body.dark-mode .base64-encoder-decoder .output {
+  scrollbar-color: var(--dark-green) var(--cream);
+}
