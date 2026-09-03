@@ -18,11 +18,6 @@ const Projects = () => {
       <div className="projects__list">
         {projects.map((project) => (
           <Link to={project.link} key={project.id} className="project-card">
-            {/* <img
-              src={project.image}
-              alt={project.name}
-              className="project-card__image"
-            /> */}
             <h2 className="project-card__name">{project.name}</h2>
             <p className="project-card__description">{project.description}</p>
             <div className="project-card__tags">

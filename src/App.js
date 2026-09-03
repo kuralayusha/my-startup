@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Supporters from "./pages/Supporters";
-import SupportButton from "./components/SupportButton";
 
 // Projects
 import JSONBeautifier from "./projects/json-beautifier/JSONBeautifier";
@@ -20,7 +18,6 @@ import PasswordGenerator from "./projects/password-generator/PasswordGenerator";
 import ImageConverter from "./projects/image-converter/ImageConverter";
 
 const App = () => {
-  const { t } = useTranslation();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -42,7 +39,6 @@ const App = () => {
     <Router>
       <div className="App">
         <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-        {/* <SupportButton /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tools" element={<Projects />} />

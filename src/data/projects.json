@@ -4,71 +4,62 @@
     "name": "JSON Beautifier",
     "description": "Format and beautify your JSON data.",
     "link": "/tools/json-beautifier",
-    "filters": ["#json", "#formatter", "#tool"],
-    "image": "/images/beautifier-logo.svg"
+    "filters": ["#json", "#formatter", "#tool"]
   },
   {
     "id": 2,
     "name": "Frontend Playground",
     "description": "View and format HTML, CSS, and JavaScript content with live preview.",
     "link": "/tools/frontend-playground",
-    "filters": ["#html", "#css", "#javascript", "#viewer", "#tool"],
-    "image": "/images/html-viewer.png"
+    "filters": ["#html", "#css", "#javascript", "#viewer", "#tool"]
   },
   {
     "id": 3,
     "name": "JavaScript Obfuscator",
     "description": "Obfuscate your JavaScript code to make it unreadable.",
     "link": "/tools/js-obfuscator",
-    "filters": ["#javascript", "#obfuscator", "#security", "#tool"],
-    "image": "/images/js-obfuscator.png"
+    "filters": ["#javascript", "#obfuscator", "#security", "#tool"]
   },
   {
     "id": 4,
     "name": "Base64 Encoder/Decoder",
     "description": "Encode and decode text to and from Base64 format.",
     "link": "/tools/base64-encoder-decoder",
-    "filters": ["#base64", "#encoder", "#decoder", "#tool"],
-    "image": "/images/tools/base64_encode_decode.png"
+    "filters": ["#base64", "#encoder", "#decoder", "#tool"]
   },
   {
     "id": 5,
     "name": "CSS Editor",
     "description": "Edit and preview basic CSS properties dynamically.",
     "link": "/tools/css-editor",
-    "filters": ["#css", "#editor", "#tool"],
-    "image": "/images/css-editor.png"
+    "filters": ["#css", "#editor", "#tool"]
   },
   {
     "id": 6,
     "name": "Regex Tester",
     "description": "Test and validate your regular expressions.",
     "link": "/tools/regex-tester",
-    "filters": ["#regex", "#tester", "#tool"],
-    "image": "/images/regex-tester.png"
+    "filters": ["#regex", "#tester", "#tool"]
   },
   {
     "id": 7,
     "name": "URL Encoder/Decoder",
     "description": "Encode and decode URLs.",
     "link": "/tools/url-encoder-decoder",
-    "filters": ["#url", "#encoder", "#decoder", "#tool"],
-    "image": "/images/url-encoder-decoder.png"
+    "filters": ["#url", "#encoder", "#decoder", "#tool"]
   },
   {
     "id": 8,
     "name": "Password Generator",
     "description": "Generate strong and secure passwords.",
     "link": "/tools/password-generator",
-    "filters": ["#password", "#generator", "#tool"],
-    "image": "/images/password-generator.png"
+    "filters": ["#password", "#generator", "#tool"]
   },
   {
     "id": 9,
     "name": "Image Converter",
     "description": "Convert images from one format to another.",
     "link": "/tools/image-converter",
-    "filters": ["#image", "#converter", "#tool"],
-    "image": "/images/image-converter.png"
+    "filters": ["#image", "#converter", "#tool"]
   }
 ]
